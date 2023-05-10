@@ -1,5 +1,3 @@
-# statistics
+# ChatGPT and statistics
 
-## 통계학 개론 출석수업(영상강의, 4월 10일) 관련
-
-### 관련 코드와 데이터
+## 강의 관련 코드 등
