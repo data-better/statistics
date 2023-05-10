@@ -1,0 +1,30 @@
+---
+title: "cars data anaysis"
+format: html
+editor: visual
+---
+
+# cars 데이터를 이용한 회귀분석 사례 정리해줘.
+# 종속변수는 dist이고, 설명변수는 speed로 설정해줘
+# 그래프는 ggplot2로 그려줘.
+
+```{r}
+# 필요한 라이브러리(ggplot2, car) 설치 및 불러오기
+# install.packages("ggplot2")
+
+library(ggplot2)
+
+# 데이터 불러오기
+data(cars)
+
+# 회귀분석 모델 적합
+fit <- lm(dist ~ speed, data = cars)
+
+# 회귀분석 결과 요약
+summary(fit)
+
+# 회귀선이 있는 산점도 그리기
+ggplot(cars, aes(x = speed, y = dist)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
